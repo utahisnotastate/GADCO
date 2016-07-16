@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grand Approach Door Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/blue-grey.css">
+    <link rel="stylesheet" type="text/css" href="css/sup-blue-grey.css">
+    
+    <!-- <link rel="stylesheet" type="text/css" href="css/gadco.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <style type="text/css">
+        html,body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        img {
+            width: 100%;
+           
+        }
+        
+        #row1 {
+            background: linear-gradient(to bottom,#3a4b53, #57707d);
+        }
+        #row2 {
+            background: linear-gradient(0deg,#3a4b53, #57707d);
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        
+        .gadco-content {
+            min-height: 150px;
+        }
+        
+        .w3-display-container {
+            border: 12px solid #3a4b53;
+        }
+        
+        
+        
+    </style>
+
+</head>
+
+<body ng-app="myApp">
+    <div class="w3-row">
+        <div class="w3-col s12">
+        <div class="w3-container w3-theme-d5">
+        <ul class="w3-navbar w3-center">
+            <li class="w3-small" style="width:14%"><a href="index.html">Grand Approach Door Company</a></li>
+            <li style="width:14%"><a href="aboutus.html">About Us</a></li>
+            <li style="width:14%"><a href="ourdesigns.html">Our Designs</a></li>
+            <li style="width:14%"><a href="customization.html">Customization</a></li>
+            <li style="width:14%"><a href="contactus.html">Contact Us</a></li>
+            <li style="width:14%"><a href="faq.html">FAQ</a></li>
+            <li style="width:14%"><a href="faq.html">Blog</a></li>  
+        </ul>
+        </div>
+        </div>
+    </div>
+    <!-- BEGIN Row 1 with slider --><div id="row1" class="w3-row">
+        
+                <div class="w3-content w3-display-container">
+                    <div class="w3-card-24 w3-center">
+                        <img class="mySlides w3-animate-opacity" src="images/medimage1smushed.png">
+                        <img class="mySlides w3-animate-opacity" src="images/medimage2smushed.png">
+                        <img class="mySlides w3-animate-opacity" src="images/medimage3smushed.png">
+                        <img class="mySlides w3-animate-opacity" src="images/medimage4smushed.png">
+                        
+
+                </div>
+            
+        </div>
+        
+    <!-- End Row 1 with Slider   --></div>
+    
+    <!-- Begin Row 2 with Marketting Content -->
+        <div id="row2" class="w3-row-padding">
+         
+  <div class="w3-col s12 m4">
+    <div class="w3-card-4 w3-border">
+      <header class="w3-container w3-theme w3-center">
+  <h5>Our Designs</h5>
+      </header>
+      <div class="w3-container w3-center gadco-content">
+  <p>Take a look at our fully customizable, pre-designed door and window systems.</p>
+      </div>
+    
+      <footer class="w3-container w3-center w3-theme-l1">
+        <h5>View Designs</h5>
+      </footer>
+    </div>
+  </div>
+  
+    <div class="w3-col s12 m4">
+    <div class="w3-card-4 w3-border gadco-content">
+      <header class="w3-container w3-theme w3-center">
+  <h5>Custom Designs</h5>
+      </header>
+      <div class="w3-container w3-center gadco-content">
+  <p>At Grand Approach we are commited to providing our clients with as many custom options and finishes as possible. Not only are all our designs completely alterable, but we are also capable of delivering almost any design you can image.</p>
+      </div>
+      <footer class="w3-container w3-center w3-theme-l1">
+        <h5>Learn More Here</h5>
+      </footer>
+    </div>
+  </div>
+  
+    <div class="w3-col s12 m4">
+    <div class="w3-card-4 w3-border gadco-content">
+      <header class="w3-container w3-theme w3-center">
+  <h5>Contact Us</h5>
+      </header>
+    <div class="w3-container w3-center gadco-content">
+  <p>Do you still have questions or would you like a price quote? Please contact us, and our representatives will be happy to help any way we can.</p>
+      </div>
+      <footer class="w3-container w3-center w3-theme-l1">
+        <h5>Contact!</h5>
+      </footer>
+    </div>
+  </div>
+
+
+</div><!-- End Row div-->
+    <!-- End Row 2 with Marketting Content -->
+    
+    <!-- Begin Row 3 with Footer -->
+        
+        <div class="w3-row w3-theme-d5">
+            <div id="footer" class="w3-col s12" style="height: 100px;">
+            <p class="w3-center">Grand Approach Door Company 2016</p>
+            </div>
+        </div>
+    
+    <!-- End Row 3 with Footer -->
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000);    
+}
+</script>
+</body>
+
+</html>

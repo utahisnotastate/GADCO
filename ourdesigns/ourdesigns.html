@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Our Designs</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/superhero.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/quick.css">
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+    
+        <style type="text/css">
+        body {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+
+<body ng-app="odApp"> 
+    <div ng-controller="ctrl">
+        <script src="angular.min.js"></script>
+    <script src="angular-animate.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="app.js"></script> -->
+    <script type="text/javascript" src="ourdesigns.js"></script>
+    <script src="dirPagination.js"></script>
+        <!-- Navbar-->
+    <div class="navbar-wrapper">
+        <div class="container-fluid">
+            <!-- Header-->
+            <div class="w3-row">
+                <!-- Nav Bar Begins -->
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="#" class="navbar-brand">Grand Approach Door Company</a>
+                        </div>
+                        <!-- Collection of nav links and other content for toggling -->
+                        <div id="navbarCollapse" class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="aboutus.html">About Us</a></li>
+                                <li><a href="ourdesigns.html">Our Designs</a></li>
+                                <li><a href="customization.html">Customization</a></li>
+                                <li><a href="contactus.html">Contact Us</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+
+            </div>
+            <!-- End navbar row -->
+
+        </div>
+        <!-- End div for navbar fluid container -->
+
+    </div>
+    <!-- End div for navbar wrapper -->
+
+    <!-- Navbar ends-->
+    <!-- First row just has header and copywriting -->
+    <div class="w3-row">
+        
+        <!-- Blank Column -->
+            <div class="w3-col s3"></div>
+        <!-- Begin content column which has two rows: one for heading, and second row for marketing -->
+       
+            <!-- Begin Row 1 which just has page header in it -->
+                <div class="w3-col s6 w3-red">
+                
+                    <div class="w3-container w3-center">
+                <h1><a href="" ng-click="activeTemplate='partials/content.html'">Our Designs</a></h1>
+                <p class="w3-justify">Our idea library is a work in progress and currently includes two product lines, the Modern Design Collection and the Iron Works Collection. All of our designs are fully customizable and each design can be used in double or single door
+                    configurations, with or without sidelights and transoms. Additionally, we are able to build almost any design using solid hardwood, glass, and wrought iron elements. Contact us today for all your custom door needs. </p>
+                    </div>
+                   
+                    </div>
+          
+
+            <!-- End row 1 of content column -->
+            <div class="w3-col s3"></div>
+
+
+
+        
+
+      
+
+
+    </div>
+    <!-- End of First row just has header and copywriting -->
+    
+    <!-- Second row has ourdesigns controller, and links to each product line -->
+    
+        <div class="w3-row">
+
+            <div class="w3-col s3"></div>
+            <div class="w3-col s3"><a href="" ng-click="activeTemplate='partials/content2.html'">Modern Design</a></div>
+            <div class="w3-col s3"><a href="" ng-click="activeTemplate='partials/content3.html'">Iron Works</a></div>
+            <div class="w3-col s3"></div>
+        </div>
+    <!-- End of Second row has ourdesigns controller, and links to each product line -->
+    
+    <!-- Begin third row which contains the dynamic template of modern design and iron works --> 
+        <div class="w3-row">
+            
+            <div ng-include="activeTemplate"></div>
+            
+        </div>
+    <!-- End third row which contains the dynamic template of modern design and iron works -->
+    </div><!-- End controller Div -->
+    <!-- Begin fourth row which shows where the dynamic content ends -->
+    <hr>
+    <div class="w3-row">
+        <footer class="footer">
+            <div class="container">
+                <p class="text-center">Grand Approach Door Company, LLC <span class="glyphicon glyphicon-copyright-mark"></span>2016</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Footer ends-->
+
+</body>
+
+</html>

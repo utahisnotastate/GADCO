@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Our Designs</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/lavish-bootstrap.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/superhero.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/quick.css">
+
+    <style type="text/css">
+        body {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+
+<body ng-app="odApp">
+
+    <script src="../angular.min.js"></script>
+    <script src="../angular-animate.js"></script>
+    <script src="../angular-route.js"></script>
+    <script src="../jquery.min.js"></script>
+    <script src="../bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="app.js"></script> -->
+    <script type="text/javascript" src="../ourdesigns.js"></script>
+    <script type="text/javascript" src="doors.js"></script>
+    <script src="../dirPagination.js"></script>
+
+    <!-- Navbar-->
+    <div class="navbar-wrapper">
+        <div class="container-fluid">
+            <!-- Header-->
+            <div class="row">
+                <!-- Nav Bar Begins -->
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="#" class="navbar-brand">Grand Approach Door Company</a>
+                        </div>
+                        <!-- Collection of nav links and other content for toggling -->
+                        <div id="navbarCollapse" class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="aboutus.html">About Us</a></li>
+                                <li><a href="ourdesigns.html">Our Designs</a></li>
+                                <li><a href="customization.html">Customization</a></li>
+                                <li><a href="contactus.html">Contact Us</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+
+            </div>
+            <!-- End navbar row -->
+
+        </div>
+        <!-- End div for navbar fluid container -->
+
+    </div>
+    <!-- End div for navbar wrapper -->
+
+    <!-- Begin page container -->
+    <div class="container-fluid">
+
+
+        <div class="row">
+            <!-- Row 2 announcement bar hidden -->
+
+            <div class="col-sm-12">
+                <!-- Begin only column in row 2 -->
+                <p class="text-center">Announcement!</p>
+
+            </div>
+            <!-- End div for only column in row 2 -->
+
+        </div>
+        <!-- end div for Row 2 -->
+        <!--Begin Row 3: 1 content column 2 empty columns  -->
+        <div class="row">
+            <!--Begin left empty column -->
+            <div class="col-xs-2 visible-lg">
+                <p class="text-center">Left Empty Column</p>
+            </div>
+            <!--End Left empty column -->
+
+            <!-- Begin Content column -->
+            <div class="col-xs-8">
+                <!-- both content columns are on the same row -->
+                <div class="row">
+                    <!--Begin Full Door image column -->
+                    <div class="col-xs-6"><img src="../images/MTD001.jpeg" class="img-responsive"></div>
+                    <!-- End Full Door image column -->
+
+                    <!-- Begin tab column-->
+                    <div class="col-xs-6" ng-controller="TabController">
+                        <!-- tab column has 2 rows: row 1 has tabs, row 2 has tab content -->
+
+                        <!--Row 1 begins, contains: the selectable tabs -->
+                        <div class="row">                           
+                            <ul class="nav nav-tabs">                      
+                            <li ng-class="{ active: isSet(1) }"><a href ng-click="setTab(1)">Product Details</a></li>
+                            <li ng-class="{ active: isSet(2) }"><a href ng-click="setTab(2)">Glass Options</a></li>
+                            <!-- <li ng-class="{ active: isSet(3) }"><a href ng-click="setTab(3)">Stain Options</a></li> -->
+                            <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Stain Options <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li ng-class="{ active: isSet(3) }"><a href ng-click="setTab(3)">Mahogany Stains</a></li>
+                <li ng-class="{ active: isSet(4) }"><a href ng-click="setTab(4)">Alder Stains</a></li>              
+            </ul>
+        </li>
+                        </ul>
+                               <!-- end div for tab row column  -->
+                        </div>
+                        <!-- End Row 1-->
+
+                        <!-- Begin Row 2 which contains tab content-->
+                        <div class="row">
+                            <div class="col-xs-12">
+                            <div ng-show="isSet(1)">                     
+                                    <h5 class="text-center">Modern Design</h5>
+                            </div>
+                            <div ng-show="isSet(2)">                     
+                                   <div class="row" ng-controller="RepeatGlass as show">
+                                   
+                                        <!-- begin card attempt: 1 column that has two rows in it -->
+                                            <!-- Begin Card Column -->
+                                            <div class="col-xs-4" ng-repeat="glass in show.glasses">
+                                                    <!-- begin row 1 which is image-->
+                                                        <div class="row"><img ng-src="doorglass/glassthumbs/{{ glass.productID}}thumb.png" class="img-responsive"></div>
+                                                        <!-- end div for row 1 of card-->
+                                                            <!-- begin row 2 which is product ID -->
+                                                            <div class="row">{{ glass.name}}</div>
+                                                            <!-- end row 2 which is product ID -->
+                                            
+                                            </div><!-- End div for card column-->
+                                        
+                                        <!-- end card attempt -->
+                                   </div> <!-- end div for glass options row -->
+                            </div>
+                            <div ng-show="isSet(3)">                     
+                                    <div class="row" ng-controller="RepeatMahogany as show">
+                                   
+                                        <!-- begin card attempt: 1 column that has two rows in it -->
+                                            <!-- Begin Card Column -->
+                                            <div class="col-xs-4" ng-repeat="mahstain in show.mahstains">
+                                                    <!-- begin row 1 which is image-->
+                                                        <div class="row"><img ng-src="doorstain/{{ mahstain.productID}}.jpg" class="img-responsive"></div>
+                                                        <!-- end div for row 1 of card-->
+                                                            <!-- begin row 2 which is product ID -->
+                                                            <div class="row">{{ mahstain.name}}</div>
+                                                            <!-- end row 2 which is product ID -->
+                                            
+                                            </div><!-- End div for card column-->
+                                        
+                                        <!-- end card attempt -->
+                                   </div> <!-- end div for glass options row -->
+                            </div>
+                            <div ng-show="isSet(4)">                     
+                                    <div class="row" ng-controller="RepeatAlder as show">
+                                   
+                                        <!-- begin card attempt: 1 column that has two rows in it -->
+                                            <!-- Begin Card Column -->
+                                            <div class="col-xs-4" ng-repeat="aldstain in show.aldstains">
+                                                    <!-- begin row 1 which is image-->
+                                                        <div class="row"><img ng-src="doorstain/{{ aldstain.productID}}.jpg" class="img-responsive"></div>
+                                                        <!-- end div for row 1 of card-->
+                                                            <!-- begin row 2 which is product ID -->
+                                                            <div class="row">{{ aldstain.name}}</div>
+                                                            <!-- end row 2 which is product ID -->
+                                            
+                                            </div><!-- End div for card column-->
+                                        
+                                        <!-- end card attempt -->
+                                   </div> <!-- end div for glass options row -->
+                            </div>
+                            </div>
+                                </div><!-- end div for tab content column -->
+                        </div>
+                        <!-- End Row 2-->
+
+
+
+
+
+
+
+
+                    </div>
+                    <!--end tab column -->
+                </div>
+                <!-- end content row div -->
+            </div>
+            <!-- end div for main content column -->
+            <!-- Begin Right empty Column-->
+            <div class="col-xs-2 visible-lg">
+                <p class="text-center">Right empty column</p>
+            </div>
+            <!-- End Right Empty Column-->
+
+
+        </div>
+        <!--End Div for Row 3 -->
+
+        <!-- Begin Row 4 which is footer -->
+        <!-- Begin fourth row which shows where the dynamic content ends -->
+        <hr>
+        <div class="row">
+            <footer class="footer">
+                
+                    <p class="text-center">Grand Approach Door Company, LLC <span class="glyphicon glyphicon-copyright-mark"></span>2016</p>
+                
+            </footer>
+        </div>
+
+        <!-- Footer ends-->
+
+        <!--End row 4 which is footer  -->
+    </div>
+    <!-- End main page container div -->
+</body>
+
+</html>

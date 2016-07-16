@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="store">
+
+<head>
+    <title>Grand Approach Door Company</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/superhero.css">
+    
+    
+    <style type="text/css">
+    body{
+        padding-top: 70px;
+    }
+</style>
+
+</head>
+<body>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/app2.js"></script>
+<!-- Header begins -->
+
+<!-- Header Ends --> 
+
+<!-- content of page is left empty column, middle content column with three rows, and right empty column -->
+
+      <!-- begin left empty column --> 
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><p class="text-center">Left Empty Column</p></div>
+     <!-- end left empty column --> 
+
+            <!-- Begin middle main content column --> 
+             
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <!-- main content column has three rows: First row: "Our designs column" second row: our designs flavor text column, third row --> 
+                   <!-- Begin first row which is just our designs row -->
+                        <div class="row"> 
+                        <h1 class="text-center">Our Designs</h1>
+                    
+                        </div><!-- End our designs row --> 
+                    
+                    <!-- Begin second row which is just our designs flavor text row --> 
+                    <div class="row">
+                        <p class="text-justified">Our idea library is a work in progress and currently includes two product lines, the Modern Design Collection and the Iron Works Collection. All of our designs are fully customizable and each design can be used in double or single door configurations, with or without sidelights and transoms. Additionally, we are able to build almost any design using solid hardwood, glass, and wrought iron elements. Contact us today for all your custom door needs.
+</p>
+                     </div> <!-- end second row which is our designs flavor text --> 
+                        
+                        <!-- begin third row which is product tab/grid content --> 
+                      <div class="row"> 
+                            <!-- Modern Design Collection Button column --> 
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <div class="row">
+                                <p class="text-center">Modern Design Collection</p>
+                                </div>
+                                <div class="row">
+                                    <div ng-controller="StoreController as store">
+                                    <div ng-repeat="products in store.products">
+                                    <h1>{{store.products.productid}}</h1>
+                                    <h2>{{store.products.description}}</h2>
+                                    </div>
+                                    </div>
+                            </div>
+                            </div>
+                            <!-- End modern design collection buttoncollumn --> 
+                            
+                            <!-- Iron Works collection button column--> 
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <p class="text-center">{{ 5 + 3}}</p>
+                            </div>
+                            <!-- End Iron works collection button column--> 
+                            
+                        </div>
+                        
+                            </div><!-- end third row which is product tab/grid content --> 
+
+            </div><!-- end middle main content column --> 
+                         <!-- angular controller end div -->
+
+
+        <!-- Begin right empty column -->
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><p class="text-center">Right Empty Column</p></div>
+
+        <!-- End Right empty column -->
+        
+<!-- End content of page --> 
+        
+        <!-- Begin footer of page --> 
+        
+        <!-- End footer of page --> 
+
+        </body>
+        </html>

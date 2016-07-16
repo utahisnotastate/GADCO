@@ -1,0 +1,11 @@
+
+#card {
+        background-color: burlywood;
+}
+
+.w3-animate-left {
+    animation-timing-function: ease;
+}
+.w3-animate-right {
+    animation-timing-function: ease;
+}

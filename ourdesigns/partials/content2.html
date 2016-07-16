@@ -1,0 +1,38 @@
+<div class="row w3-animate-left" ng-controller="RepeatDoor as show">
+    <!-- Empty Column --><div class="col-lg-3"></div>
+    
+    <!-- Middle column with content --> <div id="odcolumn" class="col-lg-6">
+    <!-- Individual door column --><div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" dir-paginate="door in show.doors | itemsPerPage: 8">
+                <div class="w3-card">
+            <!-- <header class="w3-container w3-theme-l5"><h4>{{ door.productID }}                                               
+                                            </h4></header> -->
+            <a href="/doors/{{door.productID}}.html">
+                <img ng-src="/images/thumbs/{{door.productID}}thumb.bmp" class="img-responsive w3-border">
+            </a>
+            <!-- <p>{{ door.productline }}</p>
+
+            <p>{{ door.description }}</p> -->
+            <div class="w3-container w3-center">
+                <p>{{door.productID}}</p>
+            </div>
+            </div>
+    <!-- End Individual door column --></div>
+    <!-- End Middle column with content --> </div>
+    <!-- Empty Column --><div class="col-lg-3"></div>
+<!-- End repeat door controller --></div>
+<div class="row">
+    <!-- Empty Column --><div class="col-lg-3"></div>
+    <div class="col-lg-6">
+        <dir-pagination-controls 
+            [max-size="12" ] 
+            [direction-links="" ] 
+            [boundary-links="true" ] 
+            [on-page-change="" ] 
+            [pagination-id="" ] 
+            [template-url="" ] 
+            [auto-hide="" ]>
+            </dir-pagination-controls>
+    </div>
+    <!-- Empty Column --><div class="col-lg-3"></div>
+</div>
+

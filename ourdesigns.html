@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Grand Approach Door Company</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/superhero.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <style type="text/css">
+        body {
+            padding-top: 70px;
+        }
+    </style>
+
+</head>
+
+<body ng-app="tabApp">
+    <!-- Navbar-->
+    <div class="navbar-wrapper">
+        <div class="container-fluid">
+            <!-- Header-->
+            <div class="row">
+                <!-- Nav Bar Begins -->
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="#" class="navbar-brand">Grand Approach Door Company</a>
+                        </div>
+                        <!-- Collection of nav links and other content for toggling -->
+                        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="ourdesigns.html">Our Designs</a></li>
+                <li><a href="customization.html">Customization</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+
+            </div>
+            <!-- End navbar row -->
+
+        </div>
+        <!-- End div for navbar fluid container -->
+
+    </div>
+    <!-- End div for navbar wrapper -->
+
+    <!-- Navbar ends-->
+
+    <!-- Page Description row which contains 1 content column and two blank columns (right and left)-->
+    <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+        <!-- Blank Column -->
+
+        <!-- Begin content column which has two rows: one for heading, and second row for marketing -->
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <!-- Begin Row 1 which just has page header in it -->
+            <div class="row">
+                <h1 class="text-center">Our Designs</h1>
+                <p>Our idea library is a work in progress and currently includes two product lines, the Modern Design Collection and the Iron Works Collection. All of our designs are fully customizable and each design can be used in double or single door
+                    configurations, with or without sidelights and transoms. Additionally, we are able to build almost any design using solid hardwood, glass, and wrought iron elements. Contact us today for all your custom door needs. </p>
+            </div>
+
+            <!-- End row 1 of content column -->
+
+
+
+        </div>
+        <!-- End content column -->
+
+
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+        <!-- Blank Column -->
+
+
+    </div>
+    <!--Page description content ends -->
+
+    <!-- Begin product line tab row. Consists of two tab columns, begins with empty column, then tab columns, and row finishes with an empty column -->
+    <div class="row" ng-controller="TabController">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div> <!-- Empty column  -->
+        <!-- Modern Design Tab -->
+        <ul class="nav nav-tabs list-inline">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <li ng-class="{ active: isSet(1) }">
+                    <a href ng-click="setTab(1)">Modern Design</a>
+                </li>
+            </div>
+            <!-- Modern Design Tab ends -->
+            
+            <!-- Iron Designs Tab Begins-->
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <li ng-class="{ active: isSet(2) }">
+                    <a href ng-click="setTab(2)">Iron Designs</a>
+                </li>
+            </div>
+            <!-- Iron Designs tab ends-->
+        </ul>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+    
+    </div> <!-- End product line tab row -->
+        
+
+  <!-- Begin product view row, contains: empty column, modern design column, iron design column, empty column  -->
+    <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div> <!-- Empty Column -->
+        <!-- Modern Design product grid-->
+       
+        <div ng-show="isSet(1)">
+            
+            <h1>Modern Design</h1>
+            <div class="well">
+                <p>The Grand Approach philosophy is full customization leads to one-of-a-kind doors that will give your home, business, or structure the level of elegance and style it deserves.
+                    <br>Below you will see an introduction to all of our currently available customization options. If you are interested in more options, drop us a line. Our network of builders and hardware distributors provide us with a very high level
+                    of flexibility for countless configurations and options. </p>
+            </div>
+       
+        </div>
+        <!-- Modern Design product grid ends-->
+
+
+        <!-- Pagination content-->
+
+        <!-- Pagination content ends -->
+
+
+
+
+        <!-- Iron works product grid -->
+         
+                <div ng-show="isSet(2)">
+                   
+                        <h1>Iron Designs</h1>
+                            <p>Using only high quality hardwood species and the highest quality cuts of those species provide a truly luxurious door. We currently offer products made in Mahogany, Alder, and Pacific Cherry and have plans to add additional species as they
+                             become available.</p>
+                </div>
+        
+        <!-- Iron works product grid content ends-->
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div> <!-- Empty Column -->
+ </div><!-- End product view row -->
+
+        <!-- Footer -->
+        <hr>
+        <div class="row">
+            <footer class="footer">
+                <div class="container">
+                    <p class="text-center">Grand Approach Door Company, LLC <span class="glyphicon glyphicon-copyright-mark"></span>2016</p>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Footer ends-->
+
+</body>
+
+</html>

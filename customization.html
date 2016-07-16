@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grand Approach Door Company</title>
+
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/blue-grey.css">
+    <link rel="stylesheet" type="text/css" href="css/animations.css">
+    
+
+</head>
+
+<body ng-app="tabApp">
+<script src="js/angular.min.js"></script>
+<script src="js/angular-animate.js"></script>
+<script src="js/app.js"></script>
+<script src="js/custom.js"></script>
+    <!-- Header -->
+    <div class="w3-row">
+        <div class="w3-col s12">
+        <div class="w3-container w3-theme-d4">
+        <ul class="w3-navbar">
+            <li style="width:40%"><a href="index.html">Gadco</a></li>
+            <li style="width:12%"><a href="aboutus.html">About Us</a></li>
+            <li style="width:12%"><a href="ourdesigns.html">Our Designs</a></li>
+            <li style="width:12%"><a href="customization.html">Customization</a></li>
+            <li style="width:12%"><a href="contactus.html">Contact Us</a></li>
+            <li style="width:12%"><a href="faq.html">FAQ</a></li> 
+        </ul>
+        </div>
+        </div>
+    </div>
+    
+   
+    <!-- Tab List -->
+    <div class="w3-row" ng-controller="TabController">
+            
+       <div class="w3-col s6 m2"> 
+            <ul class="w3-ul w3-hoverable w3-border">
+
+                <li ng-class="{ active: isSet(1) }">
+                    <a href ng-click="setTab(1)">Introduction</a>
+                </li>
+
+                <li ng-class="{ active: isSet(2) }">
+                    <a href ng-click="setTab(2)">Wood Species</a>
+                </li>
+
+                <li ng-class="{ active: isSet(3) }">
+                    <a href ng-click="setTab(3)">Stain Types</a>
+                </li>
+                <li ng-class="{ active: isSet(4) }">
+                    <a href ng-click="setTab(4)">Sidelights and Transoms</a>
+                </li>
+                <li ng-class="{ active: isSet(5) }">
+                    <a href ng-click="setTab(5)">Wrought Iron and Iron Accessories</a>
+                </li>
+                <li ng-class="{ active: isSet(6) }">
+                    <a href ng-click="setTab(6)">Glass Types</a>
+                </li>
+                <li ng-class="{ active: isSet(7) }">
+                    <a href ng-click="setTab(7)">Glass Etching</a>
+                </li>
+                <li ng-class="{ active: isSet(8) }">
+                    <a href ng-click="setTab(8)">Wood Molding</a>
+                </li>
+                <li ng-class="{ active: isSet(9) }">
+                    <a href ng-click="setTab(9)">Degrees of Distressing</a>
+                </li>
+                <li ng-class="{ active: isSet(10) }">
+                    <a href ng-click="setTab(10)">Hand Carving</a>
+                </li>
+                <li ng-class="{ active: isSet(11) }">
+                    <a href ng-click="setTab(11)">Hardware</a>
+                </li>
+                <li ng-class="{ active: isSet(12) }">
+                    <a href ng-click="setTab(12)">Conclusion</a>
+                </li>                
+            </ul>
+      
+        </div> 
+
+        <div class="w3-theme w3-col s6 m10">
+          
+            <!-- Tab Content -->
+            <div ng-show="isSet(1)">
+                <div class="w3-container w3-animate-right w3-center">
+                        <h1>Introduction</h1>
+                
+                        <p>{{show.rand}}The Grand Approach philosophy is full customization leads to one-of-a-kind doors that will give your home, business, or structure the level of elegance and style it deserves. <br>Below you will see an introduction to all of our currently available customization options. If you are interested in more options, drop us a line. Our network of builders and hardware distributors provide us with a very high level of flexibility for countless configurations and options. </p>
+                </div>
+            </div>
+
+            <div ng-show="isSet(2)">
+                <div class="w3-container w3-animate-right">
+                    <h1>Wood Species</h1>
+                    <p>Using only high quality hardwood species and the highest quality cuts of those species provide a truly luxurious door. We currently offer products made in Mahogany, Alder, and Pacific Cherry and have plans to add additional species as they become available.</p>
+                </div>
+            </div>
+
+            <div ng-show="isSet(3)">
+              <div class="w3-container w3-animate-right">  
+                <h1>Stain Types</h1>
+                <p> We have a dozen stock stain colors ranging from Blonde to Ebony with many shades in between. We are sure we can match any interior or exterior color schemes and will provide you with stain samples with which to select the perfect stain. Additionally, we have a number of glazes to increase the shine of your door. </p> <br>
+                <p>If you have a custom stain color you would like to use, send us a sample and we will create a matching sample for you to confirm. Alternatively, we are able to provide unfinished products if you want to stain the door yourself. We can also paint your doors a number of different paint colors to assist you in creating the perfect door. </p>
+            </div>
+            </div>
+            <div ng-show="isSet(4)">
+                <div class="w3-container w3-animate-right">
+                <h1>Sidelights and Transoms</h1>
+                <p> Sidelights are the vertical windows that sit next to a door, and transoms are the windows that sit on top. We have many different configurations of both sidelights and transoms that can increase the natural light of your foyer and add immensely to the elegance of your home. Configurations include single or dual sidelights and full wrap around sidelights and transoms.</p>
+            </div>
+            </div>
+            <div ng-show="isSet(5)">
+                <div class="w3-container w3-animate-right">
+                <h1>Wrought Iron and Iron Accessories</h1>
+                <dl class="dl-horizontal">
+                    <dt>Wrought Iron</dt>
+                    <dd>Our wrought iron comes in a variety of thicknesses and textures in both square and circular shapes. They can also be created in black, copper, or silver colors with smooth, antique, or rustic finishes.</dd>
+                    <dt>Iron Accessories</dt>
+                    <dd>The best way to accent your rich mahogany door or the wrought iron on it is through our iron accessories. We have tons of options including of clavos, iron strapping, speakeasy door covers, or wrought iron accents.</dd>                    
+                </dl>
+                </div>
+            </div>
+            <div ng-show="isSet(6)">
+                <div class="w3-container w3-animate-right">
+                <h1>Glass Types</h1>
+                <p> In addition to plain clear glass and clear DP50 glass, we also offer two-way glass, eight different colors, twelve different textures, and three colored texture glass types. We also have artisan rice paper that can be sandwiched in between the two panes of glass providing a unique look with additional privacy.</p>
+            </div>
+            </div>
+             <div ng-show="isSet(7)">
+                 <div class="w3-container w3-animate-right">
+                <h1>Glass Etching</h1>
+                <p> We also provide glass etching. We can etch anything you would like into the glass of your door. </p>
+                </div>
+            </div>
+                        <div ng-show="isSet(8)">
+                    <div class="w3-container w3-animate-right">
+                            <h1>Wood Molding</h1>
+                            <p> Our trim, interior, and exterior molding come in the standard forms below, but we can custom cut any style of molding you desire and can work with you in selecting specific molding from our catalog. We can even hand carve a few styles of molding to fit your wine cellar door or beach house.</p>
+                </div>
+            </div>
+                        <div ng-show="isSet(9)">
+                            <div class="w3-container w3-animate-right">
+                <h1>Degrees of Distressing</h1>
+                <p> Wood distressing is offered in five different degrees from minor distressing to severe distressing, giving your door as much of a rustic or antique look as you want.</p>
+            </div>
+            </div>
+                        <div ng-show="isSet(10)">
+                            <div class="w3-container w3-animate-right">
+                <h1>Hand Carving</h1>
+                <p> Last but not least, we have a handful of master craftsman that are capable of adding hand carving of anything you want. Family shields, beach landscapes, or simply ornate patterns are common selections among our clients. </p>
+            </div>
+            </div>
+                        <div ng-show="isSet(11)">
+                            <div class="w3-container w3-animate-right">
+                <h1>Hardware</h1>
+                <p>Generally, our door slabs are not prepped for any hardware and our pre-hung doors are only prepped for the included hinges; however, we can be involved as much or as little as you want when it comes to hardware. Our network of hardware suppliers are capable of supplying a wide range of unique and elegant hardware. The doors can be prepped or the hardware installed at our workshop, it all depends on your requirements. </p>
+            </div>
+            </div>                                   
+            
+                        <div ng-show="isSet(12)">
+                            <div class="w3-container w3-animate-right">
+                <h1>Conclusion</h1>
+                <p>We are confident we offer the widest range of customization options and love working with people to make their dreams a reality, so please Contact Us (link) now with any questions you might have. </p>
+            </div>
+            </div>                                   
+
+        </div>
+    </div>
+    <!-- End Div for Row -->
+
+
+
+    <!-- Footer -->
+    <hr>
+ <!-- Footer -->
+ <div class="w3-row">
+        <footer class="footer">
+            <div class="w3-container">
+                <p class="w3-center">Grand Approach Door Company, LLC 2016</p>
+            </div>
+        </footer>
+ </div>
+
+<script>
+function w3_open() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+}
+function w3_close() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+}
+</script>
+
+<!-- End container Div -->
+</body>
+</html>

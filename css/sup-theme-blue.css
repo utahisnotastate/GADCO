@@ -1,0 +1,26 @@
+html,body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        img {
+            width: 100%;
+           
+        }
+        
+        #row1 {
+            background: linear-gradient(to bottom,#085a9d, #0c87eb;
+        }
+        #row2 {
+            background: linear-gradient(0deg,#085a9d, #0c87eb);
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        
+        .gadco-content {
+            min-height: 150px;
+        }
+        
+        .w3-display-container {
+            border: 12px solid #085a9d;
+        }
